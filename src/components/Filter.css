@@ -1,0 +1,64 @@
+.filter {
+    font-size: .9em;
+    display:flex;
+    align-items: center;
+    position: relative;
+    color: #4d4d4d;
+    padding: 5px 2px;
+}
+
+.filter::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    overflow: hidden;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 
+                0 8px 0 -3px #f6f6f6, 
+                0 9px 1px -3px rgba(0, 0, 0, 0.2), 
+                0 16px 0 -6px #f6f6f6, 
+                0 17px 2px -6px rgba(0, 0, 0, 0.2);
+}
+
+.todo-count {
+    margin: 5px;
+    margin-left: 10px;
+}
+
+.filter-btn {
+    margin: 0 auto;
+    position: absolute;
+    left: 50%; 
+    width: 50%;
+    transform: translateX(-50%); 
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 5px;
+    padding: 0;
+}
+.filter-btn .btn {
+    padding: 3px 5px;
+}
+
+.filter-btn .btn:hover{
+    cursor: pointer;
+}
+
+.filter-btn .active {
+    border: 1px solid #b1b1b1;
+    border-radius: 10%;
+}
+
+.clear {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.clear:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
