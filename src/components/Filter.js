@@ -6,7 +6,7 @@ class Filter extends Component{
 
     render() {
         const { todoCount, clickedItem } = this.props;
-        const types = ['All', 'Active', 'Complete'];
+        const types = ['All', 'Active', 'Completed'];
         return (
             <footer className="filter">
                 <span className="todo-count">{todoCount == 1 ? todoCount + ' item' : todoCount + ' items'} left</span>
