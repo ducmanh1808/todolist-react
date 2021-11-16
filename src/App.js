@@ -6,6 +6,7 @@ import Filter from './components/Filter'
 
 class App extends Component {
   constructor(){
+    document.title = "todolist";
     super();
     this.state = {
       newItem: '',
