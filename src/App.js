@@ -43,9 +43,10 @@ class App extends Component {
     if(event.keyCode === 13){
       let text = event.target.value.trim();
       if(text.length > 0 ){
+        
         this.setState({
           newItem: '',
-          TodoItems: [ { title: text, isComplete: false },...this.state.TodoItems]
+          TodoItems: [ { title: text, isComplete: false, id: this.state.TodoItems.length },...this.state.TodoItems]
         })
       }
     }
@@ -89,7 +90,7 @@ class App extends Component {
             </div>
             {
               TodoItems.length>0 && filterTask.map((item,index) => 
-                <TodoItem key={index} item={item} index={index} onClick= {this.onItemClicked(item)} deleteTask={this.deleteTask} editTask={this.editTask}/>)
+                <TodoItem key={item.id} item={item} index={index} onClick= {this.onItemClicked(item)} deleteTask={this.deleteTask} editTask={this.editTask}/>)
             }
             {
               TodoItems.length>0 && <Filter todoCount={unDoTask} clickedItem={currentFilter}  clearComplete={this.clearComplete} FilterClick={this.onFilterClick} />           
